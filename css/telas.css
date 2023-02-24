@@ -69,6 +69,7 @@ main {
     --color-yellow: #FFD008;
     --color-aqua-green: #72AFA6;
     --color-aqua-green1: #B6D7C1;
+    --color-azul-turquesa: #46B5C3;
 }
 
 .animate.delay {
@@ -103,7 +104,7 @@ main {
     display: none;
     width: 40px;
     height: 85px;
-    background: var(--color-aqua-green) center center no-repeat;
+    background: var(--color-azul-turquesa) center center no-repeat;
     /* box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);*/
     position: absolute;
     top: 50%;
@@ -178,7 +179,7 @@ main {
 }
 
 .bg-footer {
-    background-color: var(--color-aqua-green);
+    background-color: var(--color-azul-turquesa);
     color: var(--color-blue1);
 }
 
@@ -208,7 +209,7 @@ footer {
 .nav-telas-progresso a {
     display: table-cell;
     height: 10px;
-    background-color: var(--color-aqua-green1);
+    background-color: var(--color-azul-turquesa1);
     border: 1px #fff solid;
     border-collapse: collapse;
     position: relative;
@@ -227,11 +228,11 @@ footer {
 }
 
 .nav-telas-progresso .tela-atual {
-    background-color: var(--color-aqua-green);
+    background-color: var(--color-azul-turquesa);
 }
 
 .nav-telas-progresso .tela-visualizada {
-    background-color: var(--color-aqua-green);
+    background-color: var(--color-azul-turquesa);
 }
 
 .nav-telas-progresso a>span>span {
@@ -345,7 +346,7 @@ a:hover {
 
 .objetivo-modal {
     width: 400px;
-    background-color: var(--color-aqua-green);
+    background-color: var(--color-azul-turquesa);
     margin: 121.25px auto;
     padding: 20px;
 }
@@ -366,7 +367,7 @@ a:hover {
 .saiba-mais-modal {
     height: 184px;
     width: 470px;
-    background-color: var(--color-aqua-green);
+    background-color: var(--color-azul-turquesa);
     margin: 164px auto;
     padding-left: 30px;
     padding-right: 30px;
@@ -387,7 +388,7 @@ a:hover {
 .saiba-mais-modal .close {
     width: 20px;
     height: 20px;
-    background-color: var(--color-aqua-green);
+    background-color: var(--color-azul-turquesa);
     position: absolute;
     right: 0px;
     top: -24px;
@@ -1026,7 +1027,7 @@ audio {
 /* Botões da aula */
 
 .btn-aula01 {
-    background-color: var(--color-aqua-green);
+    background-color: var(--color-azul-turquesa);
     color: var(--color-blue1);
     height: 70px;
     width: 65%;

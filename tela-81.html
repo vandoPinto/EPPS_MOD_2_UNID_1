@@ -1,134 +1,25 @@
-<style>
-    li {
-        margin-bottom: 12px;
-        margin-left: 18px;
-    }
-
-    .questao:hover {
-        background-color: var(--color-aqua-green);
-        cursor: pointer;
-    }
-
-    .marcado {
-        background-color: var(--color-aqua-green);
-    }
-
-    .opWrong {
-        opacity: 0.5;
-    }
-
-    .submeter {
-        margin: 1em auto;
-        font-weight: bold;
-        color: #ffffff;
-        border-radius: 3px;
-        background-color: var(--color-aqua-green);
-        border: solid 0 transparent;
-        outline: none;
-        box-shadow: 0 .1em rgba(0, 0, 0, .5);
-        padding: .5em;
-        display: block;
-        width: 50%;
-        cursor: pointer;
-        text-align: center;
-    }
-
-    /* .feed {
-            position: relative;
-            width: 270px;
-            height: 125px;
-            background-color: rgba(255, 214, 64, 1);
-            border-radius: 10px;
-            flex-wrap: nowrap;
-            cursor: pointer;
-        } */
-</style>
 <div class="largura-1_1">
-    <img style="width:100%; right: 0px;" src="recursos/imgs/RM_M1A1_Banner01.svg">
-    <div style="position: absolute;top: 11px;left: 96px;">
-        <p style="font-family: 'OpenSans', sans-serif;color: #08536A;font-size: 15px;font-weight: 900;">POLÍTICAS
-            PÚBLICAS EM SAÚDE</p>
-    </div>
+	<img style="width:100%; right: 0px;" src="recursos/imgs/RM_M1A1_Banner01.svg">
+	<div style="position: absolute;top: 11px;left: 96px;">
+		<p style="font-family: 'OpenSans', sans-serif;color: #08536A;font-size: 15px;font-weight: 900;">POLÍTICAS
+			PÚBLICAS EM SAÚDE</p>
+	</div>
 </div>
-<div class="coluna-direita largura-1_1">
-    <div style="width: 90%;margin: 25px auto;">
-        <!-- <iframe src="quiz.html"></iframe> -->
-        <h1>Questão 3</h1>
-        <p>A respeito dos movimentos em direção à cidade, a partir da década de 1970, julgue as afirmativas a seguir:
-        </p>
-        <p style="margin-left: 20px;">
-            I- Nesse cenário, é possível afirmar que foi desse convívio urbano, muitas vezes forçado e insalubre, que se
-            constituíram reivindicações pelos direitos sociais básicos relacionados a moradia, transporte, saúde e
-            educação.
-            <br><br>
-            II - As populações que permaneceram no campo, na floresta e nas águas, em especial no Nordeste e
-            no Norte, seguiram invisibilizadas em condições de precarização, vulnerabilidades e desigualdades
-            históricas.
-            <br><br>
-            III- A falta de acesso aos serviços de saneamento básico e aos serviços de saúde são reveladores
-            da extensão das iniquidades e injustiças sociais que ameaçam a vida dessas populações “de fora da cidade”.
-        </p>
-        <p>É correto dizer que:</p>
-        <div style="margin-left: 20px;">
-            <p class="questao" id="opc_e">a)</p>
-            <p class="questao" id="opc_e">b)</p>
-            <p class="questao" id="opc_c">c)</p>
-            <p class="questao" id="opc_e">d)</p>
-        </div>
-        <div class="submeter" style="width: 20%; margin-top: -10px; display: none;">Submeter</div>
-        <div style="position: absolute; width: 500px; left: 21%; top: 28%; height: 150px; display: none;"
-            id="feedCerto">
-            <div class="objetivo animate__animated animate__pulse">
-                <div>
-                    <img class="icone-image" style="width: 11%; margin-right: -6%; margin-top: -24px;"
-                        src="recursos/icones/RM_M1A1_Icones10.svg">
-                    <div class="box-click" style="width:468px; margin: 0;">
-                        <div class="line-box">
-                            <div style="margin-left: 20px;">
-                                <h1>Resposta correta</h1>
-                                <p style="margin-top: 15px;">
-                                    Parabéns! O Estado brasileiro acumula dívidas históricas com os territórios do
-                                    campo, da floresta e das águas, por violações sistemáticas do conjunto de direitos
-                                    fundamentais e difusos. Atualmente, são essas populações que ousaram consolidar
-                                    modelos de existência conflitantes com a grande aceleração do mercado transnacional,
-                                    redutor do papel do Estado, que interpelam a insustentabilidade dos conglomerados
-                                    urbanos geradores de suburbanizações.</p>
-                            </div>
-                        </div>
-                        <div class="modal-fechar">
-                            <button class="btn-fechar" onclick="closeModalSim('dv-modal-sim')">Fechar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="position: absolute; width: 500px; left: 21%; top: 27%; height: 150px; display: none;"
-            id="feedErrado">
-            <div class="objetivo animate__animated animate__pulse">
-                <div>
-                    <img class="icone-image" style="width: 11%; margin-right: -6%; margin-top: -24px;"
-                        src="recursos/icones/RM_M1A1_Icones10.svg">
-                    <div class="box-click" style="width:468px; margin: 0;">
-                        <div class="line-box">
-                            <div style="margin-left: 20px;">
-                                <h1>Resposta incorreta</h1>
-                                <p style="margin-top: 15px;">
-                                    Na verdade, a alternativa correta é a letra “c”. O Estado brasileiro acumula dívidas
-                                    históricas com os territórios do campo, da floresta e das águas, por violações
-                                    sistemáticas do conjunto de direitos fundamentais e difusos. Atualmente, são essas
-                                    populações que ousaram consolidar modelos de existência conflitantes com a grande
-                                    aceleração do mercado transnacional, redutor do papel do Estado, que interpelam a
-                                    insustentabilidade dos conglomerados urbanos geradores de suburbanizações.</p>
-                            </div>
-                        </div>
-                        <div class="modal-fechar">
-                            <button class="btn-fechar" onclick="closeModalSim('dv-modal-sim')">Fechar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="coluna-esquerda largura-1_1 ">
+	<div style="margin: 10px 0 0 30px;width: 92%;">
+		<h1>Referências</h1>
+
+		ARAUJO, G. C. C.; FOLMER, I.; MARIA, V. A. Geografia e Sars-Cov 2: Olhares e Reflexões sobre a pandemia.
+		Geoingá: Revista do Programa de Pós-Graduação em Geografia, Maringá, v. 14, n. 1, pp. 220-247, 2022 BISPO
+		JUNIOR, J. P. Resiliência do Sistema Único de Saúde no contexto da pandemia de COVID-19: como se fortalecer? Cad
+		Saúde Pública, Rio de Janeiro, v. 38, n. 10, 2022. BORTOLOZZI, A. (org.). Cidades reivindicadas: territórios da
+		luta, das utopias e do prazer. São Paulo: Olho d‟água, 2011. BRASIL. Instituto Brasileiro de Geografia e
+		Estatística. Aglomerados Subnormais, o que é?. Brasília: IBGE, 2022. Disponível em:
+		https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/15788-aglomerados-subnormais.html?=&t=o-que-e.
+		Acesso em: 13 nov. 2022 BRASIL. Instituto Brasileiro de Geografia e Estatística. Censo Demográfico 2010. IBGE,
+		2010. Disponível em: https://censo2010.ibge.gov.br/. Acesso em: 18 jan. 2023.
+
+	</div>
 </div>
 <footer class="bg-footer" style="padding: 0; height: 40px;">
 	<div style="display: flex;justify-content: space-between;">
@@ -150,61 +41,3 @@
 		</div>
 	</div>
 </footer>
-<script>
-    $(() => {
-        let resposta = '';
-        let mostrarSub = true;
-        let feedCerto = $(document).find('[id^=feedCerto]').hide();
-        let feedErrado = $(document).find('[id^=feedErrado]').hide();
-        let submeter = $(document).find('[class=submeter]').hide();
-
-        $(feedCerto).on('click', apagarFeeds);
-        $(feedErrado).on('click', apagarFeeds);
-
-        function apagarFeeds() {
-            feedCerto.fadeOut();
-            feedErrado.fadeOut();
-        }
-
-        function desmarcarTudo() {
-            let questao = $(document).find('[id^=opc]').map((index, sel) => {
-                $(sel).removeClass("marcado");
-            })
-        }
-
-        let questao = $(document).find('[id^=opc]').map((index, sel) => {
-            $(sel).click(() => {
-                console.log(sel.id);
-                resposta = sel.id;
-                if (mostrarSub) {
-                    submeter.fadeIn();
-                }
-
-                desmarcarTudo();
-                $(sel).addClass("marcado");
-            })
-        })
-
-
-        $(submeter).on('click', () => {
-            console.log("clicou " + resposta.split("_")[1]);
-            if (resposta.split("_")[1] == "c") {
-                $(feedCerto).fadeIn();
-                pontos += 1;
-                mostrarSub = false;
-                submeter.hide();
-
-                // opacidade das questões erradas e marcação da questão certa
-
-                let questao = $(document).find('[id^=opc]').map((index, sel) => {
-                    $(sel).removeClass("questao").css("pointer-events", "none");
-
-                    let opacityWrong = $(document).find('[id^=opc_e]').addClass('opWrong');
-
-                })
-            } else {
-                $(feedErrado).fadeIn();
-            }
-        })
-    })
-</script>

@@ -172,7 +172,7 @@ header hgroup {
         z-index: 2;
         width: 30px;
         cursor: pointer;
-        color: var(--color-aqua-green);
+        color: var(--color-azul-turquesa);
     }
 
     .nav-indice-abrir a {
@@ -203,7 +203,7 @@ header hgroup {
     z-index: 3;
     top: 0;
     left: 0;
-    background-color: var(--color-aqua-green);
+    background-color: var(--color-azul-turquesa);
     overflow-x: hidden;
     transition: 0.5s;
     box-shadow: 1px 0 2px rgba(0, 0, 0, 0.5);
@@ -269,7 +269,7 @@ header hgroup {
 
 .nav-indice-lista a:hover, .nav-indice-lista a.active {
     background-color: var(--color-blue1);
-    color: var(--color-aqua-green);
+    color: var(--color-azul-turquesa);
 }
 
 .nav-indice-lista ol {
