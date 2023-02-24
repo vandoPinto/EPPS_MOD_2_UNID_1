@@ -9,7 +9,8 @@
 	<div style="margin: 117px auto auto 38px;width: 87%;">
 		<p>Nesse cenário, é possível afirmar que foi desse convívio urbano, muitas vezes forçado e insalubre, que se
 			constituíram reivindicações pelos direitos sociais básicos relacionados a moradia, transporte, saúde e
-			educação entre os <span style="color: #1592E6;">citadinos</span> das grandes metrópoles, que passaram a
+			educação entre os <span id="hotWord-bt" style="color: #1592E6;">citadinos</span> das grandes metrópoles, que
+			passaram a
 			ocupar as ruas do país em busca de
 			melhores condições de vida. Mas as populações que permaneceram no campo, na floresta e nas águas, em
 			especial no Nordeste e no Norte, seguiram invisibilizadas em condições de precarização, vulnerabilidades
@@ -42,3 +43,19 @@
 		</div>
 	</div>
 </footer>
+<div id="conteudo"
+	style="position: absolute;top: 256px;left: 230px;width: 265px;height: 54px;background: #46B5C3 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;">
+	<p style="width: 240px;color: #FFFFFF;">
+		Citadinos: que ou aquele que é natural ou habitante de cidade.</p>
+</div>
+<script>
+	$(() => {
+		let conteudo = $('#conteudo').hide();
+		$('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+			conteudo.fadeIn()
+		})
+		$('#hotWord-bt').mouseout(() => {
+			conteudo.fadeOut()
+		})
+	})
+</script>

@@ -11,7 +11,8 @@
 			trabalhadores
 			e cidadão, usuários dos serviços de saúde – que se instaurou nossa Atenção Básica, fundada pelos marcos
 			de
-			Alma Ata.</p>
+			<span id="hotWord-bt" style="color: #1592E6;">Alma Ata.</span>
+		</p>
 	</div>
 </div>
 <div class="coluna-esquerda largura-1_2 ">
@@ -39,3 +40,21 @@
 		</div>
 	</div>
 </footer>
+<div id="conteudo"
+	style="position: absolute;top: 286px;left: 410px;width: 265px;height: 134px;background: #46B5C3 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;">
+	<p style="width: 240px;color: #FFFFFF;">
+		A&nbsp;Declaração de Alma-Ata&nbsp;foi adotada em setembro de 1978, na Conferência Internacional sobre Cuidados
+		Primários
+		de Saúde,&nbsp;realizada pela Organização Mundial da Saúde&nbsp;(OMS) em Alma-Ata.&nbsp;</p>
+</div>
+<script>
+	$(() => {
+		let conteudo = $('#conteudo').hide();
+		$('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+			conteudo.fadeIn()
+		})
+		$('#hotWord-bt').mouseout(() => {
+			conteudo.fadeOut()
+		})
+	})
+</script>
