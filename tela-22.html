@@ -9,8 +9,20 @@
 	<div style="margin: 33px auto;width: 83%;">
 		<p>A partir dessa compreensão, assumimos o paradoxo da descentralização como prática para garantir a
 			universalidade e a equidade em um dos maiores sistemas de saúde do mundo.</p>
+		<div
+			style="z-index: 100;display: inline-flex;margin-top: 110px;margin-left: -10px;width: 740px;justify-content: space-between;position: absolute;">
+			<div style="cursor: pointer; width: 40px; height: 40px; border-radius: 50%;">
+				<img id="volta" src="recursos/icones/RM_M1A1_Icones20.svg"
+					style="margin-top: 8px; width: 40px; margin-left: 6px; opacity: 0.6; transform: rotate(180deg);">
+			</div>
+			<div style="cursor: pointer; width: 40px; height: 40px; border-radius: 50%;">
+				<img id="avanca" src="recursos/icones/RM_M1A1_Icones20.svg"
+					style="margin-top: 8px; width: 40px; margin-left: 14px; opacity: 1; transform: rotate(360deg);">
+			</div>
+		</div>
 		<div style="margin-top: 41px;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-			<div id="janela_1">
+			<div id="janela_1"
+				style="display: flex; align-items: center; flex-direction: column; justify-content: space-between; height: 235px;">
 				<div
 					style="width: 613px;height: 141px;background: #FFAC5A 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;">
 					<p style="font: normal normal normal 14px/18px Open Sans;color: #08536A;width: 566px;">Admitimos
@@ -30,15 +42,22 @@
 						nessa realidade, de que lugar estamos enxergando e de que lugar estamos falando?</p>
 				</div>
 			</div>
-			<div id="janela_2">
+			<div id="janela_2"
+				style="display: flex; align-items: center; flex-direction: column; justify-content: space-evenly; height: 195px;">
 				<div
-					style="width: 613px;height: 141px;background: #FFAC5A 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;">
-					<p style="font: normal normal normal 14px/18px Open Sans;color: #08536A;width: 578px;">pegar
-						texto</p>
+					style="width: 613px;height: 60px;background: #FFAC5A 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;">
+					<p style="font: normal normal normal 14px/18px Open Sans;color: #08536A;width: 578px;">O que nos
+						representa e a quem nos representamos nas mesas de negociações ante os distintos
+						conhecimentos
+						advindos dos territórios? </p>
 				</div>
 				<div
-					style="width: 611px;height: 82px;background: #FFAC5A 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;">
-					<p style="font: normal normal normal 14px/18px Open Sans;color: #08536A;width: 578px;">texto</p>
+					style="width: 611px;height: 60px;background: #FFAC5A 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;">
+					<p style="font: normal normal normal 14px/18px Open Sans;color: #08536A;width: 578px;">De que
+						troca
+						de saberes-poderes estamos falando quando olhamos para os nossos territórios? Quem nos ajuda
+						a
+						olhar mais longe ou mais perto? </p>
 				</div>
 			</div>
 		</div>
@@ -64,3 +83,63 @@
 		</div>
 	</div>
 </footer>
+<script>
+	$(() => {
+		let janelas = $(document).find('[id^=janela]');
+		console.log(janelas);
+		let avanca = $(document).find('[id^=avanca]').on('click', avancar);
+		let volta = $(document).find('[id^=volta]').on('click', voltar);
+		let contador = 1;
+		$(volta).css('opacity', '0.6');
+
+		apagarJanelas();
+		$(document).find('[id^=janela_1]').show();
+
+		function avancar() {
+			if (contador < janelas.length) {
+				apagarJanelas();
+				contador++;
+				$(document).find(`[id^=janela_${contador}]`).show();
+			}
+			mudarBotoes();
+		}
+
+		function voltar() {
+			if (contador > 1) {
+				apagarJanelas();
+				contador--;
+				$(document).find(`[id^=janela_${contador}]`).show();
+			}
+			mudarBotoes();
+		}
+
+		function mudarBotoes() {
+			if (contador == 1) {
+				$(volta).css('opacity', '0.6');
+				$(avanca).css('opacity', '1');
+			}
+			if (contador == janelas.length) {
+				$(volta).css('opacity', '1');
+				$(avanca).css('opacity', '0.6');
+			}
+			if (contador > 1 && contador < janelas.length) {
+				$(volta).css('opacity', '1');
+				$(avanca).css('opacity', '1');
+			}
+		}
+
+		let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+			$(botao).click(() => {
+				apagarJanelas();
+				mudarBotao(index + 1)
+				$(janelas[index + 1]).show();
+			})
+		})
+
+		function apagarJanelas() {
+			janelas.map((index, janela) => {
+				$(janela).hide();
+			})
+		}
+	})
+</script>
