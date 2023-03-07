@@ -32,6 +32,16 @@
 		cursor: pointer;
 		text-align: center;
 	}
+
+	/* .feed {
+            position: relative;
+            width: 270px;
+            height: 125px;
+            background-color: rgba(255, 214, 64, 1);
+            border-radius: 10px;
+            flex-wrap: nowrap;
+            cursor: pointer;
+        } */
 </style>
 <div class="largura-1_1">
 	<img style="width:100%; right: 0px;" src="recursos/imgs/RM_M1A1_Banner01.svg">
@@ -41,19 +51,18 @@
 	</div>
 </div>
 <div class="coluna-direita largura-1_1">
-	<div style="width: 90%;margin: 37px auto;">
-		<!-- <iframe src="quiz.html"></iframe> -->
-		<h1>Questão 2</h1>
-		<p>o IDH é um indicador de medição do grau de desenvolvimento de uma sociedade que se pauta em três
-			parâmetros:
-		</p>
-		<div style="margin: 22px 20px;">
-			<p class="questao" id="opc_e">a) Estudos, serviços médicos e renda.</p>
-			<p class="questao" id="opc_c">b) Educação, saúde e renda.</p>
-			<p class="questao" id="opc_e">c) Estatísticas, saúde e rentabilidade da população.</p>
-			<p class="questao" id="opc_e">d) Educação, setores habitacionais e renda. </p>
+	<div style="width: 83%;margin: 37px auto;">
+		<h1>Questão 1</h1>
+		<p>Segundo o IBGE, o aglomerado subnormal caracteriza-se como “forma de ocupação irregular de terrenos de
+			propriedade alheia – públicos ou privados – para fins de habitação em áreas urbanas e, em geral,
+			caracterizados por um padrão urbanístico irregular, carência de serviços públicos essenciais e
+			localização
+			em áreas restritas à ocupação” (BRASIL, 2022).</p>
+		<div style="margin: 48px 20px;">
+			<p class="questao" id="opc_c">a) Verdadeiro </p>
+			<p class="questao" id="opc_e">b) Falso</p>
 		</div>
-		<div class="submeter" style="width: 20%; margin-top: -10px; display: none;">Submeter</div>
+		<div class="submeter" style="width: 20%; margin-top: 90px; display: none;">Submeter</div>
 		<div style="position: absolute; width: 500px; left: 21%; top: 28%; height: 150px; display: none;"
 			id="feedCerto">
 			<div class="objetivo animate__animated animate__pulse">
@@ -65,11 +74,11 @@
 							<div style="margin-left: 20px;">
 								<h1>Resposta correta</h1>
 								<p style="margin-top: 15px;">
-									Muito bem! O IDH é um indicador de medição do grau de desenvolvimento de uma
-									sociedade que se pauta em três parâmetros: educação, saúde e renda. Nesse caso,
-									a
-									variação também é de 0 a 1, mas quanto mais próximo a 1, melhor as condições de
-									desenvolvimento do país.</p>
+									Você acertou! A partir dos índices dos déficits habitacionais, podemos
+									desenvolver
+									estudos sobre a desigualdade e a pobreza. No caso brasileiro, são ocupações
+									resultantes de um processo histórico de urbanização excludente e de um passado
+									escravista que não foi devidamente reparado.</p>
 							</div>
 						</div>
 						<div class="modal-fechar">
@@ -90,14 +99,11 @@
 							<div style="margin-left: 20px;">
 								<h1>Resposta incorreta</h1>
 								<p style="margin-top: 15px;">
-									Na verdade, a alternativa correta é a letra “b”. O IDH é um indicador de medição
-									do
-									grau de desenvolvimento de uma sociedade que se pauta em três parâmetros:
-									educação,
-									saúde e renda. Nesse caso, a variação também é de 0 a 1, mas quanto mais próximo
-									a
-									1, melhor as condições de desenvolvimento do país.
-								</p>
+									Na verdade, a afirmativa está correta. A partir dos índices dos déficits
+									habitacionais, podemos desenvolver estudos sobre a desigualdade e a pobreza. No
+									caso
+									brasileiro, são ocupações resultantes de um processo histórico de urbanização
+									excludente e de um passado escravista que não foi devidamente reparado.</p>
 							</div>
 						</div>
 						<div class="modal-fechar">
@@ -163,6 +169,7 @@
 				$(sel).addClass("marcado");
 			})
 		})
+
 
 		$(submeter).on('click', () => {
 			console.log("clicou " + resposta.split("_")[1]);

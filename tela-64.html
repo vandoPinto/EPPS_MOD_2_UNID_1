@@ -5,19 +5,48 @@
 			PÚBLICAS EM SAÚDE</p>
 	</div>
 </div>
-<div class=" coluna-esquerda largura-1_2">
-	<div style="margin: 101px 0 0 58px;width: 82%;">
-		<h1>Uma pandemia no centro da análise geográfica: entre o local e global</h1>
-		<p>Pelas lentes dos geógrafos, a pandemia de covid-19 nos territórios é parte de um processo saúde-doença
-			que
-			excede a dimensão biológica e está profundamente enraizado na forma de ocupação da sociedade
-			globalizada,
-			marcada pelas contradições econômicas, políticas e socioculturais.</p>
+<div class=" coluna-direita largura-1_2 altura-1_1" style="width: 100%;">
+	<div style="margin: 137px auto auto 0px;width: 86%;">
+		<p>Pelo panorama visto no vídeo que recomendamos anteriormente, algo aconteceu quando os fluxos acelerados
+			da
+			pandemia atravessaram os distintos territórios e territorialidades locais no Brasil entre 2020 e 2022.
+		</p>
+		<p><b>Clique</b> na imagem e reflita sobre esse questionamento com as lentes de outro geógrafo, Rogério
+			Haesbaert.
+		</p>
 	</div>
 </div>
-<div class="coluna-direita largura-1_2 ">
-	<div class="animate__animated animate__zoomIn">
-		<img src="recursos/imgs/CODEP_EPPS_M2U1_RIM36.svg" style="width: 292px;margin-top: -7px;margin-right: 57px;">
+<div class="coluna-esquerda largura-1_2 ">
+	<div id="botao_1" class="animate__animated animate__backInLeft">
+		<img src="recursos/imgs/CODEP_EPPS_M2U1_RIM33.svg" style="width: 417px;margin-top: 6px;">
+	</div>
+</div>
+<div>
+	<div id="janela_1"
+		style="width: 662px; height: 280px; background: 0% 0% no-repeat padding-box padding-box rgb(70, 181, 195); position: absolute; top: 130px; left: 130px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+		<div style="width: 580px;">
+			<p>Refletindo com as lentes de outro geógrafo, Rogério Haesbaert, entendemos que alguns dos mantras do
+				globalismo planetário até aqui dominantes foram: movam-se, viajem, acelerem, cresçam, expandam-se,
+				extraiam (os recursos), consumam, privatizem, flexibilizem (as relações de trabalho), "deslocalizem"
+				(as
+				empresas).
+			</p>
+			<p>Tudo isso, frente à pandemia do coronavírus, repentinamente se inverteu: parem, não viajem,
+				desacelerem,
+				retraiam-se, não consumam, invistam em políticas públicas, estatizem (empresas em crise).
+			</p>
+			<p>Aqui, em pleno boom neoliberal, como uma praga, o último mantra a ser contestado ainda não se
+				inverteu:
+				para os trabalhadores, continua-se propondo uma flexibilização ainda maior das relações de trabalho,
+				como se estivessem testando até onde vai a resignação dessa massa de (des)empregados extremamente
+				vulneráveis.
+			</p>
+			<p>É como se, enquanto os ricos podem parar e se resguardar, os pobres devem continuar em movimento,
+				arriscando-se para garantir a nossa sobrevivência (HAESBAERT, 2021). </p>
+		</div>
+		<div style="position: absolute;top: 0px;right: 10px;color: white;">
+			<p>X</p>
+		</div>
 	</div>
 </div>
 <footer class="bg-footer" style="padding: 0; height: 40px;">
@@ -40,3 +69,28 @@
 		</div>
 	</div>
 </footer>
+<script>
+	$(() => {
+		let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+		apagarJanelas();
+		$(document).find('[id^=btn]').hide();
+		let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+			$(botao).css('cursor', 'pointer');
+			$(botao).hover(() => {
+				$(document).find(`[id=btn_${index + 1}_2]`).show();
+			});
+			$(botao).mouseleave(() => {
+				$(document).find('[id^=btn]').hide();
+			});
+			$(botao).click(() => {
+				apagarJanelas();
+				$(janelas[index]).fadeIn();
+			})
+		})
+		function apagarJanelas() {
+			janelas.map((index, janela) => {
+				$(janela).hide();
+			})
+		}
+	})
+</script>

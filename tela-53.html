@@ -5,23 +5,65 @@
 			PÚBLICAS EM SAÚDE</p>
 	</div>
 </div>
-<div class="coluna-esquerda largura-1_1">
-	<div class="objetivo animate__animated animate__pulse">
-		<div style="margin-top: 97px;">
-			<img class="icone-image" style="width: 7%;margin-right: 14%;margin-top: -30px;"
-				src="recursos/icones/RM_M1A1_Icones08.svg">
-			<div class="box-click" style="width: 63%;">
-				<div class="line-box">
-					<div style="margin-left: 20px;">
-						<h1>Atenção</h1>
-						<p style="margin-top: 15px;">
-							Considerando apenas esses indicadores que acabamos de ver, percebe-se os efeitos da
-							concentração de renda atuando no mercado imobiliário, aprofundando as desigualdades. Esses
-							imóveis desocupados ferem os princípios da função social da propriedade e seriam o
-							suficiente para cobrir o déficit habitacional, potencializando o direito à cidade como parte
-							da regulação a ser cumprida pelo Estado. </p>
-					</div>
-				</div>
+<div class="coluna-esquerda largura-1_2 altura-1_1" style="width: 100%;">
+	<div
+		style="z-index: 100;display: inline-flex;margin-top: 149px;margin-left: 90px;width: 690px;justify-content: space-between;position: absolute;">
+		<div style="cursor: pointer; width: 40px; height: 40px; border-radius: 50%;">
+			<img id="volta" src="recursos/icones/RM_M1A1_Icones20.svg"
+				style="margin-top: 8px; width: 40px; margin-left: 6px; opacity: 0.6; transform: rotate(180deg);">
+		</div>
+		<div style="cursor: pointer; width: 40px; height: 40px; border-radius: 50%;">
+			<img id="avanca" src="recursos/icones/RM_M1A1_Icones20.svg"
+				style="margin-top: 8px; width: 40px; margin-left: 14px; opacity: 1; transform: rotate(360deg);">
+		</div>
+	</div>
+	<div style="margin: 96px auto auto 107px;">
+		<div id="janela_1"
+			style="width: 599px; height: 180px; background: 0% 0% no-repeat padding-box padding-box rgb(250, 196, 150); display: flex; align-items: center; justify-content: center; margin-left: 40px;">
+			<div style="width: 543px;">
+				<p style="color: #08536A;">Klintowitz, Moreira e Tavares (2020), em publicação realizada no jornal
+					digital
+					Nexo, apresentaram
+					números relativos à desigualdade socioespacial no Brasil. </p>
+				<p style="color: #08536A;"><b>Arraste</b> para o lado e conheça esses números.</p>
+			</div>
+		</div>
+		<div id="janela_2"
+			style="width: 599px; height: 180px; background: 0% 0% no-repeat padding-box padding-box rgb(250, 196, 150); display: flex; align-items: center; justify-content: center; margin-left: 40px;">
+			<div style="width: 543px;display: flex;justify-content: space-between;">
+				<p style="color: #08536A;width: 400px;">Os autores apontam que 4 milhões de famílias residem em
+					domicílios sem
+					banheiros, 35 milhões sem água tratada e 100 milhões sem rede de esgoto. Os autores enfatizam
+					que o
+					município de São Paulo (SP), o mais populoso do país, tem 30% da população vivendo em favelas e
+					loteamentos clandestinos e 24 mil pessoas em situação de rua.</p>
+				<img src="recursos/imgs/CODEP_EPPS_M2U1_RIM27.svg" style="width: 140px;">
+			</div>
+		</div>
+		<div id="janela_3"
+			style="width: 599px; height: 180px; background: 0% 0% no-repeat padding-box padding-box rgb(250, 196, 150); display: flex; align-items: center; justify-content: center; margin-left: 40px;">
+			<div style="width: 573px;display: flex;justify-content: space-between;">
+				<img src="recursos/imgs/CODEP_EPPS_M2U1_RIM28.svg" style="width: 140px;">
+				<p style="color: #08536A;width: 400px;">Ainda segundo os autores, no Pará, a região metropolitana da
+					capital, Belém,
+					tem 66% dos domicílios em aglomerados subnormais e, por último, quase metade da população de
+					Salvador, município com a quarta maior população brasileira – ficando a atrás de São Paulo (SP),
+					Rio
+					de Janeiro (RJ) e Brasília (DF) – vive em áreas de risco de alagamento e desabamento
+					(KLINTOWITZ,
+					MOREIRA; TAVARES, 2020).</p>
+			</div>
+		</div>
+		<div id="janela_4"
+			style="width: 599px; height: 180px; background: 0% 0% no-repeat padding-box padding-box rgb(250, 196, 150); display: flex; align-items: center; justify-content: center; margin-left: 40px;">
+			<div style="width: 543px;display: flex;justify-content: space-between;">
+				<p style="color: #08536A;width: 400px;">Em relação à questão habitacional, Klintowitz, Moreira e
+					Tavares (2020)
+					destacam que há 7 milhões de imóveis vagos e que, desses, 6,3 milhões poderiam ser convertidos
+					em
+					moradia. Aproximando essas informações dos dados da Fundação João Pinheiro (2021), o déficit
+					habitacional estimava uma carência de 5,060 milhões de domicílios em áreas urbanas. </p>
+				<img src="recursos/imgs/CODEP_EPPS_M2U1_RIM29.svg" style="width: 140px;">
 			</div>
 		</div>
 	</div>
@@ -46,3 +88,63 @@
 		</div>
 	</div>
 </footer>
+<script>
+	$(() => {
+		let janelas = $(document).find('[id^=janela]');
+		console.log(janelas);
+		let avanca = $(document).find('[id^=avanca]').on('click', avancar);
+		let volta = $(document).find('[id^=volta]').on('click', voltar);
+		let contador = 1;
+		$(volta).css('opacity', '0.6');
+
+		apagarJanelas();
+		$(document).find('[id^=janela_1]').show();
+
+		function avancar() {
+			if (contador < janelas.length) {
+				apagarJanelas();
+				contador++;
+				$(document).find(`[id^=janela_${contador}]`).show();
+			}
+			mudarBotoes();
+		}
+
+		function voltar() {
+			if (contador > 1) {
+				apagarJanelas();
+				contador--;
+				$(document).find(`[id^=janela_${contador}]`).show();
+			}
+			mudarBotoes();
+		}
+
+		function mudarBotoes() {
+			if (contador == 1) {
+				$(volta).css('opacity', '0.6');
+				$(avanca).css('opacity', '1');
+			}
+			if (contador == janelas.length) {
+				$(volta).css('opacity', '1');
+				$(avanca).css('opacity', '0.6');
+			}
+			if (contador > 1 && contador < janelas.length) {
+				$(volta).css('opacity', '1');
+				$(avanca).css('opacity', '1');
+			}
+		}
+
+		let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+			$(botao).click(() => {
+				apagarJanelas();
+				mudarBotao(index + 1)
+				$(janelas[index + 1]).show();
+			})
+		})
+
+		function apagarJanelas() {
+			janelas.map((index, janela) => {
+				$(janela).hide();
+			})
+		}
+	})
+</script>
